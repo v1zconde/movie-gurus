@@ -10,8 +10,28 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <h2>Welcome <span class="member-name"></span></h2>
+      <h2>Hello <span class="member-name"></span></h2>
     </div>
   </div>
 </div>
+<section class="questions">
+<!-- Questions -->
+   <form>
+    {{!-- Question 1 --}}
+    <div class="">
+      <input type="text" class="form-control text-questions" placeholder="Movie Genre...">
+    </div>
+
+    {{!-- Question 2 --}}
+    <div class="">
+      <input type="text" class="form-control text-questions" placeholder="Actor or Director...">
+    </div>
+  </div>
+  {{!-- Question 3 --}}
+  <div class="">
+      <input type="text" class="form-control text-questions" placeholder="Release Year...">
+    </div>
+    <button type="button" class="btn btn-outline-success btn-lg ml-3">Search <i class="fas fa-angle-double-right text-danger"></i></button>
+</form>
+</section>
 <script type="text/javascript" src="js/members.js"></script>

@@ -2,3 +2,10 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+  .text-questions{
+    width: 55%;
+    padding: 22px;
+    margin: 15px;
+    border-radius: 50px;
+  }
