@@ -1,3 +1,4 @@
+
 CREATE DATABASE netflixmovies_db;
 USE netflixmovies_db;
 DROP TABLE IF EXISTS moviesntvshows;
