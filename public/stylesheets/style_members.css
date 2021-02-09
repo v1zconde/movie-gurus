@@ -25,3 +25,14 @@
     margin: 15px;
     border-radius: 30px;
   }
+  .suggestions{
+    margin: 15px;
+    background-color: red;
+    padding: 5%;
+  }
+
+  .continue-watching{
+    margin: 15px;
+    background-color: blue;
+    padding: 5%;
+  }
