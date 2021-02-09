@@ -1,4 +1,4 @@
-
+{{!-- 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +14,7 @@
   <title>Moviessaver</title>
 </head>
 
-<body>
+{{!-- <body> --}}
  <header class="inner">
       <h2><a href="/"><i class="fas fa-code"></i>
           Save Your Flix!</a></h2>
@@ -57,9 +57,9 @@
     </div>
     <script type="text/javascript" src="js/members.js"></script>
 
-</body>
+</body> --}}
 
-</html>
+{{!-- </html> --}}
 =======
 {{!-- NavBar --}}
 <nav class="navbar navbar-expand-lg navbar-dark bg-light p-3">
@@ -89,24 +89,25 @@
 
 <!-- Questions -->
 <section class="questions">
-   <form>
+   <form class="search">
     {{!-- Question 1 --}}
-    <div class="">
-      <input type="text" class="form-control text-questions" placeholder="Movie Genre...">
+    <div class="form-group">
+      <input type="text" id="genreSearch" class="form-control text-questions" placeholder="Movie Genre...">
     </div>
 
     {{!-- Question 2 --}}
-    <div class="">
-      <input type="text" class="form-control text-questions" placeholder="Actor or Director...">
+    <div class="form-group">
+      <input type="text" id="prefActors" class="form-control text-questions" placeholder="Actor or Director...">
     </div>
   </div>
   {{!-- Question 3 --}}
-  <div class="">
-      <input type="text" class="form-control text-questions" placeholder="Release Year...">
+  <div class="form-group">
+      <input type="text" id="yearSearch" class="form-control text-questions" placeholder="Release Year...">
     </div>
-    <button type="button" class="btn btn-outline-success btn-lg ml-3">Search <i class="fas fa-angle-double-right text-danger"></i></button>
+    <button type="submit" id="test" class="btn btn-outline-success btn-lg ml-3">Search <i class="fas fa-angle-double-right text-danger"></i></button>
 </form>
 </section>
 
 <script type="text/javascript" src="js/members.js"></script>
+<script type="text/javascript" src="js/movies.js"></script>
 
