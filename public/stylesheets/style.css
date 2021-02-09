@@ -2,3 +2,61 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+.search-wrap {
+  background: url('../img/movietest.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  padding: 1.3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-wrap h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: whitesmoke;
+  margin: 0 0 1.5rem;
+  text-align: center;
+}
+
+.search-form input[type='submit'] {
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: whitesmoke;
+  padding: 0 2rem;
+  cursor: pointer;
+  transition: all 0.8s;
+}
+
+.search-form input[type='submit']:hover {
+  background: var(--primary-hover-color);
+  border: 1px solid var(--primary-hover-color);
+}
+
+.search-form {
+  display: flex;
+  width: 600px;
+  box-shadow: var(--box-shadow);
+}
+
+.search-form i {
+  color: #333;
+}
+
+/* Everything in the search form */
+.search-form > * {
+  border: 0;
+  padding: 0 0 0 10px;
+  background: whitesmoke;
+  line-height: 50px;
+  font-size: 1rem;
+  border-radius: 0;
+  outline: 0;
+}
+
+input[type='search'] {
+  flex-basis: 600px;
+}
