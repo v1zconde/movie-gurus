@@ -1,69 +1,70 @@
-// var Sequelize = require('sequelize');
+// Creating our Movies model
+const Sequelize = require('sequelize');
 
-// module.exports = function (sequelize, Datatypes) {
-//     var Movies = sequelize.define('Movies', {
-//         id: {
-//             type: Datatypes.INTERGER,
-//             autoIncrement: true,
-//             primaryKey: true,
-//             allowNull: false
-//         },
-//         show_id: {
-//             type: Datatypes.VARCHAR,
-//         },
-//         type: {
-//             type: Datatypes.VARCHAR,
-//             allowNull: false,
-//         },
-//         title: {
-//             type: Datatypes.VARCHAR,
-//             allowNull: false,
-//         },
-//         director: {
-//             type: Datatypes.VARCHAR,
-//             defaultValue: false
+module.exports = function (Sequelize, Datatypes) {
+    let Movies = Sequelize.define('Movies', {
+        id: {
+            type: Datatypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true,
+            allowNull: false
+        },
+        show_id: {
+            type: Datatypes.STRING,
+        },
+        type: {
+            type: Datatypes.STRING,
+            allowNull: false,
+        },
+        title: {
+            type: Datatypes.STRING,
+            allowNull: false,
+        },
+        director: {
+            type: Datatypes.STRING,
+            defaultValue: false
 
-//         },
-//         cast: {
-//             type: Datatypes.TEXT,
-//             allowNull: false
-//         },
-//         country: {
-//             type: Datatypes.VARCHAR,
-//             allowNull: false
-//         },
-//         date_added: {
-//             type: Datatypes.VARCHAR,
-//             defaultValue: false
-//         },
-//         release_year: {
-//             type: Datatypes.VARCHAR
+        },
+        cast: {
+            type: Datatypes.TEXT,
+            allowNull: false
+        },
+        country: {
+            type: Datatypes.STRING,
+            allowNull: false
+        },
+        date_added: {
+            type: Datatypes.STRING,
+            defaultValue: false
+        },
+        release_year: {
+            type: Datatypes.STRING
 
-//         },
-//         rating: {
-//             type: Datatypes.VARCHAR
-//         },
-//         duration: {
-//             type: Datatypes.VARCHAR
-//         },
-//         listed_in: {
-//             type: Datatypes.VARCHAR
-//         },
-//         description: {
-//             type: Datatypes.TEXT
+        },
+        rating: {
+            type: Datatypes.STRING
+        },
+        duration: {
+            type: Datatypes.STRING
+        },
+        listed_in: {
+            type: Datatypes.STRING
+        },
+        description: {
+            type: Datatypes.TEXT
 
-//         },
-//         watched: {
-//             type: Datatypes.VARCHAR
+        },
+        watched: {
+            type: Datatypes.STRING
 
-//         },
-//         personal_rating: {
-//             type: Datatypes.VARCHAR
+        },
+        personal_rating: {
+            type: Datatypes.STRING
 
-//         }
+        }
 
 
 
-//     })
-//     return Movies;
-// }
+    })
+    return Movies;
+}
