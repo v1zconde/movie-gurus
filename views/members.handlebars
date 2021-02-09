@@ -1,87 +1,35 @@
-{{!-- 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-
-  <link rel="stylesheet" href="/css/style.css">
-  <title>Moviessaver</title>
-</head>
-
-{{!-- <body> --}}
- <header class="inner">
-      <h2><a href="/"><i class="fas fa-code"></i>
-          Save Your Flix!</a></h2>
-      <nav>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/movies">All Movies</a>
-          </li>
-          <li>
-            <a href="/movies/add">Add Movies</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/logout">
-            Logout
-          </a>
-        </div>
-      </div>
-    </nav>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <h2>Welcome <span class="member-name"></span></h2>
-        </div>
-      </div>
-    </div>
-
-
-    
-
-    <div class="container">
-      {{{body}}}
-    </div>
-    <script type="text/javascript" src="js/members.js"></script>
-
-</body> --}}
-
-{{!-- </html> --}}
-=======
 {{!-- NavBar --}}
 <nav class="navbar navbar-expand-lg navbar-dark bg-light p-3">
   {{!-- Logo --}}
-  <a class="navbar-brand text-dark" href="#">Movie Gurus</a>  
+  <a class="navbar-brand text-dark" href="/">Movie Gurus</a>
+  <h2><a href="/"><i class="fas fa-code"></i>
+          Save Your Flix!</a></h2>  
   {{!-- Right Side of the navbar --}}
   <ul class="navbar-nav ml-auto">
+    {{!-- All Movies --}}
     <li class="nav-item">
-      <a class="navbar-item nav-link navbar-right text-dark" href="/logout">
-        Logout
-      </a>
+      <a class="navbar-item nav-link navbar-right text-dark" href="/movies">All Movies</a>
     </li>
+    {{!-- Add Movies --}}
+    <li class="nav-item">
+      <a class="navbar-item nav-link navbar-right text-dark" href="/movies/add">Add Movies</a>
+    </li>
+    {{!-- History --}}
     <li class="nav-item">
       <a class="navbar-item nav-link navbar-right text-dark" href="">
         History
+      </a>
+    </li>
+    {{!-- Logout --}}
+    <li class="nav-item">
+      <a class="navbar-item nav-link navbar-right text-dark" href="/logout">
+        Logout
       </a>
     </li>
   </ul>
 </nav>
 
 {{!-- Greeting Header --}}
-
     <div class="greeting">
       <h4 class="m-0 font-italic">Hello</h4><span class="member-name"></span>
     </div>
