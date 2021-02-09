@@ -1,12 +1,22 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/logout">
+{{!-- NavBar --}}
+<nav class="navbar navbar-expand-lg navbar-dark bg-light p-3">
+  {{!-- Logo --}}
+  <a class="navbar-brand text-dark" href="#">Movie Gurus</a>  
+  {{!-- Right Side of the navbar --}}
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <a class="navbar-item nav-link navbar-right text-dark" href="/logout">
         Logout
       </a>
-    </div>
-  </div>
+    </li>
+    <li class="nav-item">
+      <a class="navbar-item nav-link navbar-right text-dark" href="">
+        History
+      </a>
+    </li>
+  </ul>
 </nav>
+
 <div class="container">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
@@ -14,8 +24,9 @@
     </div>
   </div>
 </div>
-<section class="questions">
+
 <!-- Questions -->
+<section class="questions">
    <form>
     {{!-- Question 1 --}}
     <div class="">
@@ -34,4 +45,5 @@
     <button type="button" class="btn btn-outline-success btn-lg ml-3">Search <i class="fas fa-angle-double-right text-danger"></i></button>
 </form>
 </section>
+
 <script type="text/javascript" src="js/members.js"></script>
