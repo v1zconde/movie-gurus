@@ -1,0 +1,27 @@
+/* NavBar */
+.navbar-nav {
+    flex-direction: row;
+  }
+  
+.nav-link {
+    padding-right: .5rem !important;
+    padding-left: .5rem !important;
+  }
+
+.ml-auto{
+    left: auto !important;
+    right: 0px;
+  }
+
+/* Greeting Header */
+.greeting{
+    margin: 30px 15px;
+}
+
+/* Form Questions */
+.text-questions{
+    width: 55%;
+    padding: 22px;
+    margin: 15px;
+    border-radius: 30px;
+  }
