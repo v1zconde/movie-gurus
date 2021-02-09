@@ -1,0 +1,27 @@
+<section id="movies" class="container">
+    <h1>All Movies</h1>
+{{!--  title: 'mydummymovie',
+        type: 'Romantic',
+        country: 'America',
+        description: 'Jack loves Rose caused Titanic to sink. The End!!!!',
+        duration: '140 mins' --}}
+    {{#each movies}}
+      <div class="movie">
+      <h3>{{title}}</h3>
+      <br>
+      <p>{{country}}</p>
+      <br>
+      <p>{{duration}}</p>
+      <ul>
+        <li>Type: {{type}}</li>
+        <li><a href="mailto:{{contact_email}}" class="btn btn-reverse">Save Movie</a></li>
+      </ul>
+      <div class="movie">
+        <small>Description: <span>{{description}}</span></small>
+      </div>
+    </div>
+    {{else}}
+      <p>No Movies available</p>
+    {{/each}}
+    
+  </section>
