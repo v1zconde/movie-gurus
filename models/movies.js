@@ -2,7 +2,7 @@
 const Sequelize = require('sequelize');
 
 module.exports = function (Sequelize, Datatypes) {
-    let Movies = Sequelize.define('Movies', {
+    let Movies = Sequelize.define('moviesntvshows', {
         id: {
             type: Datatypes.INTEGER,
             autoIncrement: true,
