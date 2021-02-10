@@ -47,7 +47,18 @@ module.exports = function(app) {
     }
   });
 
-  app.get("/api/search/:movies", function(req, res) {
-  console.log(req.params.body)
+  app.get("/api/search/:title", function(req, res) {
+  
+    
+    console.log(req.body)
+ 
+    
+    db.Movies.findAll({
+			where: req.body
+		}).then(function (movies) {
+			res.json(movies);
+		});
+
+
   });
 };

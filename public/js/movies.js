@@ -15,12 +15,12 @@ let searchForm = $("form.search");
       console.log( "Handler for .submit() called." );
       console.log(movieSearchInput);
       let searchData = {
-        movieSearch: movieSearchInput
+        title: movieSearchInput
       };
-      console.log(searchData.movieSearch)
-      if (!searchData.movieSearch) {
-        console.log(searchData.movieSearch + "testing")
-        console.log(movieSearchInput.val())
+      console.log(searchData.title)
+      if (!searchData.title) {
+        console.log(searchData.title + "testing")
+   
         return;
       }
       if (genreSearchInput) {
@@ -34,33 +34,31 @@ let searchForm = $("form.search");
       }
     console.log(searchData);
       // If we have an email and password we run the loginUser function and clear the form
-      // searchMovies(searchData);
-      movieSearchInput.val("");
-      genreSearchInput.val("");
-      prefActorsInput.val("");
-      yearSearchInput.val("");
+      searchMovies(searchData);
+      $("#moviesSearch").val("");
+      $("#genreSearch").val("");
+      $("#prefActors").val("");
+      $("#yearSearch").val("");
 
 });
 
-// function searchMovies(searchData) {
-// 	const url = "/api/search/" + $.param(searchData);
-// 	console.log("URL:", url);
-// 	search(searchData).then(function (data) {
-// 		console.log("Recipe search completed successfully");
-// 		window.location.href = url;
-// 	}).catch(function(error) {
-// 		console.log("Recipe search failed", error);
-// 	});
-// }
+function searchMovies(searchData) {
+	const url = "/api/search/" + $.param(searchData);
+	console.log("URL:", url);
+	search(searchData).then(function (data) {
+		console.log("Movie search completed successfully");
+		window.location.href = url;
+	}).catch(function(error) {
+		console.log("Movie search failed", error);
+	});
+}
 
-// // AJAX http request for recipe search
-// function search(searchParam) {
-// 	return $.ajax({
-// 		url: searchParam,
-// 		type: "GET",
-// 	});
-// }
-
-
+// AJAX http request for recipe search
+function search(searchParam) {
+	return $.ajax({
+		url: searchParam.title,
+		type: "GET",
+	});
+}
 
 });
