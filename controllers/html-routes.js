@@ -28,6 +28,7 @@ module.exports = function (app) {
   app.get("/members", isAuthenticated, function (req, res) {
     res.render("members");
   });
+  
   app.get("/movies", function (req, res) {
 
     res.render("movies");

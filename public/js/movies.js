@@ -1,67 +1,65 @@
-const db = require("/models");
-let movieSearch = $("input#movieSearch");
-let genreSearch = $("input#genreSearch");
-let prefActors = $("input#prefActors");
-let yearSearch = $("input#yearSearch");
-
 $(document).ready(function() {
+let searchForm = $("form.search");
+
   console.log('movies.js loaded')
-  let searchForm = $("form.search");
+
+
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
   searchForm.on("submit", function( event ) {
       event.preventDefault();
+      let movieSearchInput = $("#moviesSearch").val().trim();
+      let genreSearchInput = $("#genreSearch").val().trim();
+      let prefActorsInput = $("#prefActors").val().trim();
+      let yearSearchInput = $("#yearSearch").val().trim();
       console.log( "Handler for .submit() called." );
+      console.log(movieSearchInput);
       let searchData = {
-        movieSearch: movieSearch.val().trim(),
+        movieSearch: movieSearchInput
       };
-  
+      console.log(searchData.movieSearch)
       if (!searchData.movieSearch) {
+        console.log(searchData.movieSearch + "testing")
+        console.log(movieSearchInput.val())
         return;
       }
-      if (genreSearch.val()) {
-        searchData.genreSearch = genreSearch.val().trim();
+      if (genreSearchInput) {
+        searchData.genreSearch = genreSearchInput;
       }
-      if (prefActors.val()) {
-        searchData.prefActors = prefActors.val().trim();
+      if (prefActorsInput) {
+        searchData.prefActors = prefActorsInput;
       }
-      if (yearSearch.val()) {
-        searchData.yearSearch = yearSearch.val().trim();
+      if (yearSearchInput) {
+        searchData.yearSearch = yearSearchInput;
       }
-
+    console.log(searchData);
       // If we have an email and password we run the loginUser function and clear the form
-      search(searchData);
-      genreSearch.val("");
-      prefActors.val("");
-      yearSearch.val("");
+      // searchMovies(searchData);
+      movieSearchInput.val("");
+      genreSearchInput.val("");
+      prefActorsInput.val("");
+      yearSearchInput.val("");
 
 });
 
-function search(searchData) {
-  // $.get("/api/movies", {
-  //   genre: genre,
-  //   actors: actors,
-  //   year: year
-  // })
-  //   .then(function(data) {
-  //     console.log("searching")
-  //     db.Movies.findAll()
-  //     // If there's an error, log the error
-  //   })
-  //   .catch(function(err) {
-  //     console.log(err);
-  //   });
+// function searchMovies(searchData) {
+// 	const url = "/api/search/" + $.param(searchData);
+// 	console.log("URL:", url);
+// 	search(searchData).then(function (data) {
+// 		console.log("Recipe search completed successfully");
+// 		window.location.href = url;
+// 	}).catch(function(error) {
+// 		console.log("Recipe search failed", error);
+// 	});
+// }
 
-  app.get("/api/movies", function (req, res) {
-		db.Movies.findAll({
-			where: req.body
-		}).then(function (movies) {
-			res.json(movies);
-      console.log(movies);
-		});
-	});
-
-}
+// // AJAX http request for recipe search
+// function search(searchParam) {
+// 	return $.ajax({
+// 		url: searchParam,
+// 		type: "GET",
+// 	});
+// }
 
 
 

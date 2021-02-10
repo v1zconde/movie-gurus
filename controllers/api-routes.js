@@ -47,16 +47,7 @@ module.exports = function(app) {
     }
   });
 
-  app.get("/api/search", function(req, res) {
-    db.Movies.create({
-      email: req.body.email,
-      password: req.body.password
-    })
-      .then(function() {
-        res.redirect(307, "/api/login");
-      })
-      .catch(function(err) {
-        res.status(401).json(err);
-      });
+  app.get("/api/search/:movies", function(req, res) {
+  console.log(req.params.body)
   });
 };
