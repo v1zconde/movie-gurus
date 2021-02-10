@@ -19,16 +19,39 @@
 }
 
 /* Form Questions */
+
+.text-questions{
+    width: 55%;
+    padding: 22px;
+    margin: 15px;
+    border-radius: 30px;
+  }
+
+  .form-group{
+    background: url('../img/moviessaver.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 20vh;
+    width: 100%;
+    padding: 1.3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+.searchbtn {
+margin: auto;
+display: flex;
+display: grid;
+text-align:center;
+}
+
 .questions-form {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 45%;
 }
-.text-questions {
-  padding: 22px;
-  border-radius: 30px;
-}
+
 .searchBtn {
   display: block;
   margin-left: auto;
@@ -43,4 +66,5 @@
   background-color: grey;
   padding: 5%;
 }
+
 
