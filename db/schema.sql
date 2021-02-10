@@ -1,8 +1,8 @@
 
 CREATE DATABASE netflixmovies_db;
 USE netflixmovies_db;
-DROP TABLE IF EXISTS moviesntvshows;
-CREATE TABLE moviesntvshows(
+DROP TABLE IF EXISTS movies;
+CREATE TABLE movies(
 id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 show_id VARCHAR(255),
 type VARCHAR(255) NOT NULL,

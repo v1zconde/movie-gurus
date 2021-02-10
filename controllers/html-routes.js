@@ -29,8 +29,10 @@ module.exports = function (app) {
     res.render("members");
   });
   
-  app.get("/movies", function (req, res) {
+  // app.get("/movies", function (req, res) {
 
-    res.render("movies");
-  })
+  //   res.render("movies");
+  // })
+
+  // app.get("/")
 };

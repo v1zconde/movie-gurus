@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
     "bcryptjs": "2.4.3",
     "express": "^4.17.0",
     "express-handlebars": "^5.2.0",
