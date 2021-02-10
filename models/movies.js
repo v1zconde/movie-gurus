@@ -1,5 +1,5 @@
 // Creating our Movies model
-const Sequelize = require('sequelize');
+var sequelize = require('sequelize');
 
 module.exports = function (Sequelize, Datatypes) {
     let Movies = Sequelize.define('moviesntvshows', {
@@ -63,8 +63,9 @@ module.exports = function (Sequelize, Datatypes) {
 
         }
 
-
-
     })
+
+
+
     return Movies;
 }

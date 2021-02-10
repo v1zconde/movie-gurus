@@ -1,3 +1,4 @@
+
 {{!-- NavBar --}}
 <nav class="navbar navbar-expand-lg navbar-dark bg-light p-3">
   {{!-- Logo --}}
@@ -15,15 +16,11 @@
     </li>
     {{!-- History --}}
     <li class="nav-item">
-      <a class="navbar-item nav-link navbar-right text-dark" href="">
-        History
-      </a>
+      <a class="navbar-item nav-link navbar-right text-dark" href="">History</a>
     </li>
     {{!-- Logout --}}
     <li class="nav-item">
-      <a class="navbar-item nav-link navbar-right text-dark" href="/logout">
-        Logout
-      </a>
+      <a class="navbar-item nav-link navbar-right text-dark" href="/logout">Logout</a>
     </li>
   </ul>
 </nav>
@@ -35,15 +32,13 @@
 
 
 <!-- Questions -->
-<section class="questions">
-   <form class="search">
+<section class="questions questions-form">
+   <form class="search ">
    
     {{!-- Question 1 --}}
      <div class="form-group">
       <input type="text" id="moviesSearch" class="form-control text-questions" placeholder="Movie names: Sherlock Holmes ...">
-    </div>
-    
-    
+    </div>    
     {{!-- Question 2 --}}
     <div class="form-group">
       <input type="text" id="genreSearch" class="form-control text-questions" placeholder="Movie Genre...">
@@ -53,15 +48,95 @@
     <div class="form-group">
       <input type="text" id="prefActors" class="form-control text-questions" placeholder="Actor or Director...">
     </div>
-  </div>
+ 
   {{!-- Question 4 --}}
   <div class="form-group">
       <input type="text" id="yearSearch" class="form-control text-questions" placeholder="Release Year...">
     </div>
-    <button type="submit" id="test" class="btn btn-outline-success btn-lg ml-3">Search <i class="fas fa-angle-double-right text-danger"></i></button>
+    <button type="submit" id="test" class="btn btn-outline-success btn-lg searchBtn">Search <i class="fas fa-angle-double-right text-danger"></i></button>
 </form>
 </section>
 
+
+<section id="suggestions-all" class="container-fluid text-center">
+  {{!-- Suggestions --}}
+  <h1>Suggestions</h1>
+<div id="suggestions" class="card-deck text-center">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+{{!-- Continue Watching --}}
+  <h1>Continue watching</h1>
+<div id="continue-watching" class="card-deck text-center mt-5">
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+
+</section>
+
+
+
+
 <script type="text/javascript" src="js/members.js"></script>
 <script type="text/javascript" src="js/movies.js"></script>
-

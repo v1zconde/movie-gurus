@@ -60,3 +60,7 @@ form.login {
 input[type='search'] {
   flex-basis: 600px;
 }
+
+html, body{
+  min-height: 100vh;
+}

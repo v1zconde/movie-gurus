@@ -1,24 +1,25 @@
 /* NavBar */
 .navbar-nav {
-    flex-direction: row;
-  }
-  
-.nav-link {
-    padding-right: .5rem !important;
-    padding-left: .5rem !important;
-  }
+  flex-direction: row;
+}
 
-.ml-auto{
-    left: auto !important;
-    right: 0px;
-  }
+.nav-link {
+  padding-right: 0.5rem !important;
+  padding-left: 0.5rem !important;
+}
+
+.ml-auto {
+  left: auto !important;
+  right: 0px;
+}
 
 /* Greeting Header */
-.greeting{
-    margin: 30px 15px;
+.greeting {
+  margin: 30px 15px;
 }
 
 /* Form Questions */
+
 .text-questions{
     width: 55%;
     padding: 22px;
@@ -43,3 +44,27 @@ display: flex;
 display: grid;
 text-align:center;
 }
+
+.questions-form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+}
+
+.searchBtn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.questions {
+  padding: 30px 0px;
+}
+
+#suggestions-all {
+  width: 70%;
+  background-color: grey;
+  padding: 5%;
+}
+
+
