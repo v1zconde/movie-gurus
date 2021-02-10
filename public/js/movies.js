@@ -53,6 +53,7 @@ function searchMovies(searchData) {
 	});
 }
 
+
 // AJAX http request for recipe search
 function search(searchParam) {
 	return $.ajax({
@@ -62,3 +63,10 @@ function search(searchParam) {
 }
 
 });
+
+function allMovies(data){
+
+
+
+  
+}

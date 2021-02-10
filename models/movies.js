@@ -1,14 +1,6 @@
 // Creating our Movies model
-var sequelize = require('sequelize');
-
 module.exports = function (Sequelize, Datatypes) {
-    let Movies = Sequelize.define('moviesntvshows', {
-        id: {
-            type: Datatypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true,
-            allowNull: false
-        },
+    const Movies = Sequelize.define('Movies', {
         show_id: {
             type: Datatypes.STRING,
         },
@@ -23,7 +15,6 @@ module.exports = function (Sequelize, Datatypes) {
         director: {
             type: Datatypes.STRING,
             defaultValue: false
-
         },
         cast: {
             type: Datatypes.TEXT,
@@ -39,7 +30,6 @@ module.exports = function (Sequelize, Datatypes) {
         },
         release_year: {
             type: Datatypes.STRING
-
         },
         rating: {
             type: Datatypes.STRING
@@ -52,20 +42,15 @@ module.exports = function (Sequelize, Datatypes) {
         },
         description: {
             type: Datatypes.TEXT
-
         },
         watched: {
             type: Datatypes.STRING
-
         },
         personal_rating: {
             type: Datatypes.STRING
-
         }
 
-    })
-
-
+    });
 
     return Movies;
 }
