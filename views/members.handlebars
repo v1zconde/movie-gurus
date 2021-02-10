@@ -15,15 +15,11 @@
     </li>
     {{!-- History --}}
     <li class="nav-item">
-      <a class="navbar-item nav-link navbar-right text-dark" href="">
-        History
-      </a>
+      <a class="navbar-item nav-link navbar-right text-dark" href="">History</a>
     </li>
     {{!-- Logout --}}
     <li class="nav-item">
-      <a class="navbar-item nav-link navbar-right text-dark" href="/logout">
-        Logout
-      </a>
+      <a class="navbar-item nav-link navbar-right text-dark" href="/logout">Logout</a>
     </li>
   </ul>
 </nav>
@@ -36,14 +32,12 @@
 
 <!-- Questions -->
 <section class="questions">
-   <form class="search">
+   <form class="search questions-form">
    
     {{!-- Question 1 --}}
      <div class="form-group">
       <input type="text" id="moviesSearch" class="form-control text-questions" placeholder="Movie names: Sherlock Holmes ...">
-    </div>
-    
-    
+    </div>    
     {{!-- Question 2 --}}
     <div class="form-group">
       <input type="text" id="genreSearch" class="form-control text-questions" placeholder="Movie Genre...">
@@ -58,19 +52,24 @@
   <div class="form-group">
       <input type="text" id="yearSearch" class="form-control text-questions" placeholder="Release Year...">
     </div>
-    <button type="submit" id="test" class="btn btn-outline-success btn-lg ml-3">Search <i class="fas fa-angle-double-right text-danger"></i></button>
+    <button type="submit" id="test" class="btn btn-outline-success btn-lg searchBtn">Search <i class="fas fa-angle-double-right text-danger"></i></button>
 </form>
 </section>
 
-{{!-- Suggestions --}}
-<section class="suggestions">
 
-</section>
+<section class="suggest-continue">
+  {{!-- Suggestions --}}
+<div class="suggestions">
 
+</div>
 {{!-- Continue Watching --}}
-<section class="continue-watching">
+<div class="continue-watching">
 
+</div>
 </section>
+
+
+
 
 <script type="text/javascript" src="js/members.js"></script>
 <script type="text/javascript" src="js/movies.js"></script>
