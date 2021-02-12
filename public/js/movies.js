@@ -24,7 +24,7 @@ let searchForm = $("form.search");
         searchMoviesTitle(movieSearchInput);
       }
       if (genreSearchInput) {
-        searchMovies(genreSearchInput);
+        searchMoviesGenre(genreSearchInput);
       }
       if (prefActorsInput) {
         searchMoviesDirector(prefActorsInput);
@@ -88,6 +88,18 @@ function searchMoviesYear(searchData) {
 function searchMoviesDirector(searchData) {
 	// const url = "/api/search/" + $.param(searchData);
    const url = "/api/search/director/" + searchData;
+	console.log("URL:", url);
+	search(url).then(function (data) {
+		console.log("Movie search completed successfully");
+		window.location.href = url;
+	}).catch(function(error) {
+		console.log("Movie search failed", error);
+	});
+}
+
+function searchMoviesGenre(searchData) {
+	// const url = "/api/search/" + $.param(searchData);
+   const url = "/api/search/genre/" + searchData;
 	console.log("URL:", url);
 	search(url).then(function (data) {
 		console.log("Movie search completed successfully");

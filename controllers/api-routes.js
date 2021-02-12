@@ -96,6 +96,18 @@ module.exports = function (app) {
     });
   });
 
+  app.get("/api/search/genre/:genre", function (req, res) {
+    console.log(req.params.genre)
+    
+    db.Movies.findAll({
+      where: {listed_in: req.params.genre}
+    }).then(function (movies) {
+       res.render('suggestion', {movies:movies})
+        //  res.json(movies);
+      // console.log(movies)
+    });
+  });
+
 };
 
 
