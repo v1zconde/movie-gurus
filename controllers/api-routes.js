@@ -79,9 +79,9 @@ module.exports = function (app) {
     db.Movies.findAll({
       where: {release_year: req.params.year}
     }).then(function (movies) {
-       res.render('suggestion', {movies:movies})
-        //  res.json(movies);
-      // console.log(movies)
+      //  res.render('suggestion', {movies:movies})
+          res.json(movies);
+      console.log(movies)
     });
   });
   app.get("/api/search/director/:director", function (req, res) {

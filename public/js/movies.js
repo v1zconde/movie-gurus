@@ -79,7 +79,33 @@ function searchMoviesYear(searchData) {
 	console.log("URL:", url);
 	search(url).then(function (data) {
 		console.log("Movie search completed successfully");
-		window.location.href = url;
+		// window.location.href = url;
+    console.log(data)
+      var list;
+    if (data.length > 4) {
+      list = 4;
+    }
+    else{
+      list = data.length;
+    }
+    for (i = 0; i < list; i ++) {
+    var section = $("#suggestions")
+    var card = $("<div>").addClass("card").attr("style", "width: 18rem;")
+    var body = $("<div>").addClass("card-body")
+    var title = $("<h5>").addClass("card-title").text(`
+    ${data[i].title}
+    ${data[i].country}
+    ${data[i].duration}
+    ${data[i].type}
+    `)
+    var text = $("<p>").addClass("card-text").text(`Description: ${data[i].description}`)
+   
+    body.append(title, text)
+    card.append(body)
+    section.append(card)
+  }
+ 
+
 	}).catch(function(error) {
 		console.log("Movie search failed", error);
 	});
