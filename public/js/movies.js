@@ -14,38 +14,49 @@ let searchForm = $("form.search");
       let yearSearchInput = $("#yearSearch").val().trim();
       console.log( "Handler for .submit() called." );
       console.log(movieSearchInput);
-      let searchData = {
-        title: movieSearchInput
-      };
-      console.log(searchData.title)
-      if (!searchData.title) {
-        console.log(searchData.title + "testing")
-   
-        return;
+      let searchData = movieSearchInput
+     
+      // let searchData = {
+      //   title: movieSearchInput
+      // };
+  
+      if (movieSearchInput) {
+        searchMoviesTitle(movieSearchInput);
       }
       if (genreSearchInput) {
-        searchData.genreSearch = genreSearchInput;
+        searchMovies(genreSearchInput);
       }
       if (prefActorsInput) {
-        searchData.prefActors = prefActorsInput;
+        searchMoviesDirector(prefActorsInput);
       }
       if (yearSearchInput) {
-        searchData.yearSearch = yearSearchInput;
+        searchMoviesYear(yearSearchInput);
       }
-    console.log(searchData);
+     
+      // if (genreSearchInput) {
+      //   searchData.genreSearch = genreSearchInput;
+      // }
+      // if (prefActorsInput) {
+      //   searchData.prefActors = prefActorsInput;
+      // }
+      // if (yearSearchInput) {
+      //   searchData.yearSearch = yearSearchInput;
+      // }
+
       // If we have an email and password we run the loginUser function and clear the form
-      searchMovies(searchData);
+   
       $("#moviesSearch").val("");
       $("#genreSearch").val("");
       $("#prefActors").val("");
       $("#yearSearch").val("");
-
+return
 });
 
-function searchMovies(searchData) {
-	const url = "/api/search/" + $.param(searchData);
+function searchMoviesTitle(searchData) {
+	// const url = "/api/search/" + $.param(searchData);
+   const url = "/api/search/title/" + searchData;
 	console.log("URL:", url);
-	search(searchData).then(function (data) {
+	search(url).then(function (data) {
 		console.log("Movie search completed successfully");
 		window.location.href = url;
 	}).catch(function(error) {
@@ -57,16 +68,33 @@ function searchMovies(searchData) {
 // AJAX http request for recipe search
 function search(searchParam) {
 	return $.ajax({
-		url: searchParam.title,
+		url: searchParam,
 		type: "GET",
 	});
 }
 
-});
-
-function allMovies(data){
-
-
-
-  
+function searchMoviesYear(searchData) {
+	// const url = "/api/search/" + $.param(searchData);
+   const url = "/api/search/year/" + searchData;
+	console.log("URL:", url);
+	search(url).then(function (data) {
+		console.log("Movie search completed successfully");
+		window.location.href = url;
+	}).catch(function(error) {
+		console.log("Movie search failed", error);
+	});
 }
+
+function searchMoviesDirector(searchData) {
+	// const url = "/api/search/" + $.param(searchData);
+   const url = "/api/search/director/" + searchData;
+	console.log("URL:", url);
+	search(url).then(function (data) {
+		console.log("Movie search completed successfully");
+		window.location.href = url;
+	}).catch(function(error) {
+		console.log("Movie search failed", error);
+	});
+}
+
+});

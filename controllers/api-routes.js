@@ -59,14 +59,45 @@ module.exports = function (app) {
   })
 
 
-  app.get("/api/search/:title", function (req, res) {
-    console.log(req.body)
+  app.get("/api/search/title/:title", function (req, res) {
+    console.log(req.params.title)
+    
+
     db.Movies.findAll({
-      where: req.body
+      where: {title: req.params.title}
     }).then(function (movies) {
-      res.json(movies);
+       res.render('suggestion', {movies:movies})
+        //  res.json(movies);
+      // console.log(movies)
     });
-
-
   });
+
+
+  app.get("/api/search/year/:year", function (req, res) {
+    console.log(req.params.year)
+    
+    db.Movies.findAll({
+      where: {release_year: req.params.year}
+    }).then(function (movies) {
+       res.render('suggestion', {movies:movies})
+        //  res.json(movies);
+      // console.log(movies)
+    });
+  });
+  app.get("/api/search/director/:director", function (req, res) {
+    console.log(req.params.director)
+    
+    db.Movies.findAll({
+      where: {director: req.params.director}
+    }).then(function (movies) {
+       res.render('suggestion', {movies:movies})
+        //  res.json(movies);
+      // console.log(movies)
+    });
+  });
+
 };
+
+
+
+

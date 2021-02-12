@@ -1,0 +1,24 @@
+<h1>Suggestions</h1>
+<div id="suggestions" class="card-deck text-center">
+{{#each movies}}
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{this.title}}
+        <br>
+      <p>{{this.country}}</p>
+      <br>
+      <p>{{this.duration}}</p>
+      <ul>
+        <li>Type: {{this.type}}</li>
+        <li><a href="mailto:{{contact_email}}" class="btn btn-reverse">Save Movie</a></li>
+      </ul>
+    </h5>
+    <p class="card-text"><small>Description: <span>{{this.description}}</span></small>.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+  {{else}}
+      <p>No Movies available</p>
+  {{/each}}
+</div>
