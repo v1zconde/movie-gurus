@@ -73,11 +73,11 @@ Deployed Heroku:
 ## Example
 ---
 ### Log In
-![Log In](./public/assets/img/xxxx.png)
+![Log In](./public/img/MG-login.png)
 ### Sign Up
-![Sign Up](./public/assets/img/xxxx.png)
+![Sign Up](./public/img/MG-signup.png)
 ### Movies
-![Movies](./public/assets/img/xxxx.png)
+![Movies](./public/img/MG-member.png)
 
   ## Questions
 you have any questions about the repo, open an issue or contact me directly at rvasquez1@gmail.com. You can find more of my work at 
